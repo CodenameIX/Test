@@ -3,22 +3,31 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Home</title>
+  <title>Web</title>
   <link href="0main.css" rel="stylesheet" type="text/css">
   <link href="navbar/navbar.css" rel="stylesheet" type="text/css">
   <link href="navbar/side/side.css" rel="stylesheet" type="text/css">
 </head>
 
 <div class="topnavbar0"></div>
+<div class="sidenavbar0"></div>
+<div class="content0">0890890</div>
 
 <body>
-  <div id="home">
-      <p>Willkommen</p>
-      <p>Auf meinem persönlichen Testbereich</p>
-  </div>
+
 
 
   <script language="javascript" type="text/javascript" src="navbar/navbar.js"></script>
+  <script>
+    const nav = document.querySelector('.sidenavbar0')
+    fetch('navbar/side/sideweb.html')
+      .then(res => res.text())
+      .then(data => {
+        nav.innerHTML = data
+        const parser = new DOMParser()
+        const doc = parser.parseFromString(data, 'text/html')
+      })
+  </script>
 </body>
 
 </html>
