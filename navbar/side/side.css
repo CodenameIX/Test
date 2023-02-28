@@ -1,0 +1,49 @@
+.sidenavbar0 {
+    background-color: rgb(24, 24, 25);
+    color: rgb(100, 100, 100);
+    display: flex;
+    text-align: center;
+    padding: 20px 0px 100px 0px;
+    margin: 0px 0px 100px 0px;
+    height: 100%;
+    width: 12%;
+    min-width: 120px;
+    position: fixed;
+    overflow: scroll;
+    justify-content: center;
+    transition: all 0.6s ease;
+    z-index: 1;
+}
+
+.sidenavbar0:hover {
+    color: rgb(225, 225, 225);
+}
+
+.sidecard {
+    display: flex;
+    color: inherit;
+    font-size: 18px;
+    border-radius: 4px;
+    width: min-content;
+    height: min-content;
+    padding: 6px 12px 6px 12px;
+    text-align: left;
+    justify-content: left;
+    text-decoration: none;
+    transition: all 0.6s ease;
+}
+
+.sidecard:hover {
+    background-color: rgb(40, 40, 40);
+}
+
+.sidecategory {
+    text-align: left;
+    justify-content: left;
+    font-size: 20px;
+    margin: 12px 0px 5px 10px;
+}
+
+.sidespace {
+    height: 250px;
+}

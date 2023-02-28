@@ -1,0 +1,44 @@
+#art1 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 100%;
+    padding: 0.5% 10% 0px 10%;
+    position: fixed;
+    overflow: scroll;
+    justify-content: center;
+    align-items: center;
+}
+
+.art2 {
+    margin: 1% 1% 1% 1%;
+    border-radius: 20px;
+    height: 403px;
+    width: 240px;
+    position: relative;
+    cursor: pointer;
+    object-fit: cover;
+    transition: all 0.2s ease;
+}
+
+.art2:hover {
+  scale: 104%;
+}
+
+.art3 {
+    margin: 60px;
+    top: 0;
+    position: fixed;
+    cursor: pointer;
+    height: 90%;
+    width: max-content;
+    transition: all 0.8s ease;
+    box-shadow: 0px 0px 120px 80px rgb(24, 24, 25);
+    z-index: 9;
+}
+
+.artspace {
+    height: 100px;
+    width: 100%;
+    bottom: 0;
+}

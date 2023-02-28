@@ -1,0 +1,70 @@
+.topnavbar0 {
+  background-color: rgb(30, 30, 35);
+  position: fixed;
+  display: flex;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  justify-content: center;
+  z-index: 2;
+}
+
+#topnavbar1 {
+  position: fixed;
+  width: 85%;
+  max-width: 1000px;
+  height: 50px;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.topnavbar2 {
+  display: flex;
+}
+
+.topcard1 {
+  background-color: rgb(30, 30, 35);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  width: 100px;
+  justify-content: center;
+}
+
+.topcard1:hover::before {
+  opacity: 1;
+}
+
+.topcard1::before,
+.topcard1::after {
+  content: "";
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.6s ease;
+  width: 100%;
+}
+
+.topcard1::before {
+  background: radial-gradient(200px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.1), transparent 60%);
+}
+
+.topcard1::after {
+  background: radial-gradient(100px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.6), transparent 60%);
+}
+
+.topcard2 {
+  background-color: rgb(60, 60, 68);
+  inset: 0px;
+}
+
+.topnavbarlink  {
+  color: rgb(200, 200, 200);
+  font: menu;
+  font-size: 1.2em;
+  text-align: center;
+  text-decoration: none;
+}
