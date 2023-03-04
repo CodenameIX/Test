@@ -1,5 +1,5 @@
 const nav = document.querySelector('.sidenavbar0')
-fetch('/01navbar/side/sideweb.html')
+fetch('/Test/01navbar/side/sideweb.html')
   .then(res => res.text())
   .then(data => {
     nav.innerHTML = data

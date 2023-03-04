@@ -1,5 +1,5 @@
 const navbar = document.querySelector('.topnavbar0');
-fetch('/01navbar/navbar.html')
+fetch('/Test/01navbar/navbar.html')
     .then(res => res.text())
     .then(data => {
         navbar.innerHTML = data;
