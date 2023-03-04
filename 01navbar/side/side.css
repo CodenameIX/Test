@@ -11,7 +11,7 @@
     position: fixed;
     overflow: scroll;
     justify-content: center;
-    transition: all 0.6s ease;
+    transition: all 0.2s ease;
     z-index: 1;
 }
 
@@ -27,21 +27,28 @@
     width: min-content;
     height: min-content;
     padding: 6px 12px 6px 12px;
+    margin: 0px 0px 0px 20px;
     text-align: left;
     justify-content: left;
     text-decoration: none;
-    transition: all 0.6s ease;
+    transition: all 0.2s ease;
 }
 
 .sidecard:hover {
-    background-color: rgb(40, 40, 40);
+    background-color: rgb(45, 45, 50);
 }
 
-.sidecategory {
-    text-align: left;
-    justify-content: left;
-    font-size: 20px;
-    margin: 12px 0px 5px 10px;
+.sidecategory1 {
+    display: flex;
+    align-items: center;
+    font-size: 21px;
+    margin: 12px 0px 4px 0px;
+}
+
+.sidecategory2 {
+    height: 28px;
+    width: 28px;
+    padding: 0px 4px 0px 0px;
 }
 
 .sidespace {

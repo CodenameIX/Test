@@ -1,16 +1,17 @@
-#art1 {
+#test1 {
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
+    width: fit-content;
     height: 100%;
-    padding: 0.5% 10% 0px 10%;
+    padding: 0.5% 1% 0px 1%;
     position: fixed;
     overflow: scroll;
     justify-content: center;
     align-items: center;
 }
 
-.art2 {
+.test2 {
+    background-color: rgb(80, 80, 80);
     margin: 1% 1% 1% 1%;
     border-radius: 20px;
     height: 403px;
@@ -19,25 +20,28 @@
     cursor: pointer;
     object-fit: cover;
     transition: all 0.2s ease;
+    
 }
 
-.art2:hover {
+.test2:hover {
   scale: 104%;
+  border-radius: 5px;
 }
 
-.art3 {
-    margin: 60px;
+
+.test3 {
+    margin: 68px;
     top: 0;
     position: fixed;
     cursor: pointer;
-    height: 90%;
+    height: 85%;
     width: max-content;
     transition: all 0.8s ease;
     box-shadow: 0px 0px 120px 80px rgb(24, 24, 25);
     z-index: 9;
 }
 
-.artspace {
+.testspace {
     height: 100px;
     width: 100%;
     bottom: 0;

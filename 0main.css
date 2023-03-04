@@ -1,7 +1,7 @@
 body {
     background-color: rgb(24, 24, 25);
     margin: 50px 0px 0px 0px;
-  }
+}
 
 #home {
     color: rgb(225, 225, 225);
@@ -27,7 +27,8 @@ body {
     text-align: center;
     display: flex;
     height: 100%;
-    width: 100%;
+    width: 88%;
+    margin-left: 12%;
     overflow: scroll;
     position: fixed;
     justify-content: center;
