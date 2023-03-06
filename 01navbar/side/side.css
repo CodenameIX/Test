@@ -7,7 +7,7 @@
     margin: 0px 0px 100px 0px;
     height: 100%;
     width: 12%;
-    min-width: 120px;
+    min-width: 180px;
     position: fixed;
     overflow: scroll;
     justify-content: center;
@@ -28,6 +28,7 @@
     height: min-content;
     padding: 6px 12px 6px 12px;
     margin: 0px 0px 0px 20px;
+    white-space: nowrap;
     text-align: left;
     justify-content: left;
     text-decoration: none;

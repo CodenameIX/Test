@@ -1,17 +1,4 @@
-.art0 {
-    background-color: rgb(24, 24, 25);
-    color: rgb(204, 204, 204);
-    text-align: center;
-    display: flex;
-    height: 100%;
-    width: 100%;
-    overflow: scroll;
-    position: fixed;
-    justify-content: center;
-    z-index: 0;
-}
-
-#art1 {
+#test1 {
     display: flex;
     flex-wrap: wrap;
     width: fit-content;
@@ -23,37 +10,38 @@
     align-items: center;
 }
 
-.art2 {
+.test2 {
     background-color: rgb(80, 80, 80);
-    display: flex;
-    margin: 25px 25px 25px 25px;
+    margin: 1% 1% 1% 1%;
     border-radius: 20px;
     height: 403px;
     width: 240px;
     position: relative;
     cursor: pointer;
     object-fit: cover;
-    transition: all 0.1s ease;
+    transition: all 0.2s ease;
+    
 }
 
-.art2:hover {
-    scale: 102%;
-    border-radius: 5px;
+.test2:hover {
+  scale: 104%;
+  border-radius: 5px;
 }
 
-.art3 {
+
+.test3 {
     margin: 68px;
     top: 0;
     position: fixed;
     cursor: pointer;
     height: 85%;
     width: max-content;
-    transition: all 0.6s ease;
+    transition: all 0.8s ease;
     box-shadow: 0px 0px 120px 80px rgb(24, 24, 25);
     z-index: 9;
 }
 
-.artspace {
+.testspace {
     height: 100px;
     width: 100%;
     bottom: 0;
