@@ -20,7 +20,7 @@ var render = Render.create({
                     width: sw,
                     height: sh,
                     wireframes: false,
-                    background: "rgb(24, 24, 25)"
+                    background: "rgb(34, 34, 35"
                 }
              });
         

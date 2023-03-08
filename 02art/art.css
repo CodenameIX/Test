@@ -33,7 +33,7 @@
     position: relative;
     cursor: pointer;
     object-fit: cover;
-    transition: all 0.1s ease;
+    transition: all 0.2s ease;
 }
 
 .art2:hover {
@@ -56,5 +56,4 @@
 .artspace {
     height: 100px;
     width: 100%;
-    bottom: 0;
 }

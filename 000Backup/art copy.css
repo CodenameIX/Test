@@ -1,0 +1,34 @@
+#art1 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 96%;
+    height: 100%;
+    padding: 0.5% 2% 0px 2%;
+    position: fixed;
+    overflow: scroll;
+    justify-content: center;
+    
+}
+
+.art2 {
+    margin: 0.5% 0.5% 0.5% 0.5%;
+    height: 40%;
+    cursor: pointer;
+    transition: all 1.2s ease;
+    overflow: hidden;
+}
+
+.art3 {
+    margin: 0;
+    position: fixed;
+    cursor: pointer;
+    height: 90%;
+    transition: all 0.8s ease;
+    box-shadow: 0px 0px 240px 180px rgb(20, 20, 20);
+}
+
+.artspace {
+    height: 250px;
+    width: 100%;
+    bottom: 0;
+}

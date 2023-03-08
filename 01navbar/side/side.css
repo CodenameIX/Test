@@ -3,13 +3,13 @@
     color: rgb(100, 100, 100);
     display: flex;
     text-align: center;
-    padding: 20px 0px 100px 0px;
-    margin: 0px 0px 100px 0px;
+    left: 0;
     height: 100%;
+    max-height: calc(100% - 50px);
     width: 12%;
-    min-width: 180px;
+    min-width: 200px;
     position: fixed;
-    overflow: scroll;
+    overflow: auto;
     justify-content: center;
     transition: all 0.2s ease;
     z-index: 1;
@@ -43,7 +43,7 @@
     display: flex;
     align-items: center;
     font-size: 21px;
-    margin: 12px 0px 4px 0px;
+    margin: 15px 0px 5px 0px;
 }
 
 .sidecategory2 {

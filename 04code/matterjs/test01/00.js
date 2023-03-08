@@ -20,7 +20,7 @@ var render = Render.create({
                     width: sw,
                     height: sh,
                     wireframes: false,
-                    background: "rgb(24, 24, 25)"
+                    background: "rgb(34, 34, 35)"
                 }
              });
         
@@ -31,10 +31,10 @@ var wallB = Bodies.rectangle(sw+50, 0, 100, sh*2, { isStatic: true });
 
 var boxes = [];
 
-let stack = Matter.Composites.stack(1100, sh-400, 10, 10, -20, -20, function(x,y){
+let stack = Matter.Composites.stack(400, sh-400, 10, 10, -20, -20, function(x,y){
     return Matter.Bodies.rectangle(x,y,40,40, {
         render: {
-            fillStyle: 'black',
+            fillStyle: 'rgb(0, 0, 0)',
         },
         friction: 0,
         restitution: 1.1,
