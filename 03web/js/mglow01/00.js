@@ -1,4 +1,4 @@
-document.getElementById("test1").onmousemove = e => {
+document.getElementById("content1").onmousemove = e => {
     for (const topcard1 of document.getElementsByClassName("test2")) {
         const rect = topcard1.getBoundingClientRect();
         x = e.clientX - rect.left;

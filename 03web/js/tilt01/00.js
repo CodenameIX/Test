@@ -1,15 +1,16 @@
-const tiltEls = document.querySelectorAll(".test2")
-const tiltMove = (x, y) => `perspective(500px) scale(1) rotateX(${x}deg) rotateY(${y}deg)`
-tiltEls.forEach(tilt => {
-    const height = tilt.clientHeight
-    const width = tilt.clientWidth
-    tilt.addEventListener("mousemove", (e) => {
-        const x = e.layerX
-        const y = e.layerY
-        const multiplier = 20
-        const xRotate = multiplier * ((y - height / 2) / height)
-        const yRotate = -multiplier * ((x - width / 2) / width)
-        tilt.style.transform = tiltMove(xRotate, yRotate)
-    })
-    tilt.addEventListener("mouseout", () => tilt.style.transform = tiltMove(0, 0))
-})
+let elements = document.getElementsByClassName("test2");
+let tiltMove = (x, y) => `perspective(500px) scale(1) rotateX(${x}deg) rotateY(${y}deg)`
+for (let i = 0; i < elements.length; i++) {
+    elements[i].addEventListener("mousemove", tiltHandler);
+    elements[i].addEventListener("mouseout", () => elements[i].style.transform = tiltMove(0, 0));
+}
+function tiltHandler(e) {
+        let height = this.clientHeight
+        let width = this.clientWidth
+        let x = e.layerX
+        let y = e.layerY
+        let multiplier = 20
+        let xRotate = multiplier * ((y - height / 2) / height)
+        let yRotate = -multiplier * ((x - width / 2) / width)
+        this.style.transform = tiltMove(xRotate, yRotate)
+}

@@ -1,0 +1,30 @@
+.test2 {
+    background-color: rgb(80, 80, 80);
+    margin: 25px 25px 25px 25px;
+    border-radius: 20px;
+    height: 403px;
+    width: 240px;
+    position: relative;
+    cursor: pointer;
+    object-fit: cover;
+    transition: all 0.2s ease;
+    
+}
+
+.test2:hover {
+  scale: 104%;
+  border-radius: 5px;
+}
+
+
+.test3 {
+    margin: 68px;
+    top: 0;
+    position: fixed;
+    cursor: pointer;
+    height: 85%;
+    width: max-content;
+    transition: all 0.8s ease;
+    box-shadow: 0px 0px 120px 80px rgb(24, 24, 25);
+    z-index: 9;
+}
