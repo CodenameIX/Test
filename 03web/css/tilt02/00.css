@@ -1,0 +1,764 @@
+* {
+  transition: all 0.3s ease;
+}
+.card {
+  display: block;
+  background: rgb(80, 80, 80);
+  height: 403px;
+  width: 240px;
+  box-shadow: 0 0 1px 0 rgb(80, 80, 80);
+  border-radius: 20px;
+  object-fit: cover;
+}
+.dcard {
+  margin: 25px 25px 25px 25px;
+  position: relative;
+  display: block;
+  perspective: 500px;
+}
+.dcard:hover{
+  scale: 104%;
+}
+.why {
+  position: absolute;
+  font-size: 24px;
+  user-select: none;
+  pointer-events: none
+}
+
+
+.trigger {
+  position: absolute;
+  height: 11.111111%;
+  width: 11.111111%;
+  display: block;
+  z-index: 2;
+}
+
+
+
+
+.trigger:nth-child(1) {
+  left: 0%;
+  top: 0%;
+}
+.trigger:nth-child(1):hover ~ .card {
+  transform: rotateY(8deg) rotateX(-6deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(2) {
+  left: 11.111111%;
+  top: 0%;
+}
+.trigger:nth-child(2):hover ~ .card {
+  transform: rotateY(6deg) rotateX(-6deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(3) {
+  left: 22.222222%;
+  top: 0%;
+}
+.trigger:nth-child(3):hover ~ .card {
+  transform: rotateY(4deg) rotateX(-6deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(4) {
+  left: 33.333333%;
+  top: 0%;
+}
+.trigger:nth-child(4):hover ~ .card {
+  transform: rotateY(2deg) rotateX(-6deg);
+  border-radius: 5px;
+}
+
+
+.trigger:nth-child(5) {
+  left: 44.444444%;
+  top: 0%;
+}
+.trigger:nth-child(5):hover ~ .card {
+  transform: rotateY(0deg) rotateX(-6deg);
+  border-radius: 5px;
+}
+
+
+.trigger:nth-child(6) {
+  left: 55.555555%;
+  top: 0%;
+}
+.trigger:nth-child(6):hover ~ .card {
+  transform: rotateY(-2deg) rotateX(-6deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(7) {
+  left: 66.666666%;
+  top: 0%;
+}
+.trigger:nth-child(7):hover ~ .card {
+  transform: rotateY(-4deg) rotateX(-6deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(8) {
+  left: 77.777777%;
+  top: 0%;
+}
+.trigger:nth-child(8):hover ~ .card {
+  transform: rotateY(-6deg) rotateX(-6deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(9) {
+  left: 88.888888%;
+  top: 0%;
+}
+.trigger:nth-child(9):hover ~ .card {
+  transform: rotateY(-8deg) rotateX(-6deg);
+  border-radius: 5px;
+}
+
+
+
+
+
+.trigger:nth-child(10) {
+  left: 0%;
+  top: 11.111111%;
+}
+.trigger:nth-child(10):hover ~ .card {
+  transform: rotateY(8deg) rotateX(-4.5deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(11) {
+  left: 11.111111%;
+  top: 11.111111%;
+}
+.trigger:nth-child(11):hover ~ .card {
+  transform: rotateY(6deg) rotateX(-4.5deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(12) {
+  left: 22.222222%;
+  top: 11.111111%;
+}
+.trigger:nth-child(12):hover ~ .card {
+  transform: rotateY(4deg) rotateX(-4.5deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(13) {
+  left: 33.333333%;
+  top: 11.111111%;
+}
+.trigger:nth-child(13):hover ~ .card {
+  transform: rotateY(2deg) rotateX(-4.5deg);
+  border-radius: 5px;
+}
+
+
+.trigger:nth-child(14) {
+  left: 44.444444%;
+  top: 11.111111%;
+}
+.trigger:nth-child(14):hover ~ .card {
+  transform: rotateY(0deg) rotateX(-4.5deg);
+  border-radius: 5px;
+}
+
+
+.trigger:nth-child(15) {
+  left: 55.555555%;
+  top: 11.111111%;
+}
+.trigger:nth-child(15):hover ~ .card {
+  transform: rotateY(-2deg) rotateX(-4.5deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(16) {
+  left: 66.666666%;
+  top: 11.111111%;
+}
+.trigger:nth-child(16):hover ~ .card {
+  transform: rotateY(-4deg) rotateX(-4.5deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(17) {
+  left: 77.777777%;
+  top: 11.111111%;
+}
+.trigger:nth-child(17):hover ~ .card {
+  transform: rotateY(-6deg) rotateX(-4.5deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(18) {
+  left: 88.888888%;
+  top: 11.111111%;
+}
+.trigger:nth-child(18):hover ~ .card {
+  transform: rotateY(-8deg) rotateX(-4.5deg);
+  border-radius: 5px;
+}
+
+
+
+
+
+.trigger:nth-child(19) {
+  left: 0%;
+  top: 22.222222%;
+}
+.trigger:nth-child(19):hover ~ .card {
+  transform: rotateY(8deg) rotateX(-3deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(20) {
+  left: 11.111111%;
+  top: 22.222222%;
+}
+.trigger:nth-child(20):hover ~ .card {
+  transform: rotateY(6deg) rotateX(-3deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(21) {
+  left: 22.222222%;
+  top: 22.222222%;
+}
+.trigger:nth-child(21):hover ~ .card {
+  transform: rotateY(4deg) rotateX(-3deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(22) {
+  left: 33.333333%;
+  top: 22.222222%;
+}
+.trigger:nth-child(22):hover ~ .card {
+  transform: rotateY(2deg) rotateX(-3deg);
+  border-radius: 5px;
+}
+
+
+.trigger:nth-child(23) {
+  left: 44.444444%;
+  top: 22.222222%;
+}
+.trigger:nth-child(23):hover ~ .card {
+  transform: rotateY(0deg) rotateX(-3deg);
+  border-radius: 5px;
+}
+
+
+.trigger:nth-child(24) {
+  left: 55.555555%;
+  top: 22.222222%;
+}
+.trigger:nth-child(24):hover ~ .card {
+  transform: rotateY(-2deg) rotateX(-3deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(25) {
+  left: 66.666666%;
+  top: 22.222222%;
+}
+.trigger:nth-child(25):hover ~ .card {
+  transform: rotateY(-4deg) rotateX(-3deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(26) {
+  left: 77.777777%;
+  top: 22.222222%;
+}
+.trigger:nth-child(26):hover ~ .card {
+  transform: rotateY(-6deg) rotateX(-3deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(27) {
+  left: 88.888888%;
+  top: 22.222222%;
+}
+.trigger:nth-child(27):hover ~ .card {
+  transform: rotateY(-8deg) rotateX(-3deg);
+  border-radius: 5px;
+}
+
+
+
+
+
+.trigger:nth-child(28) {
+  left: 0%;
+  top: 33.333333%;
+}
+.trigger:nth-child(28):hover ~ .card {
+  transform: rotateY(8deg) rotateX(-1.5deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(29) {
+  left: 11.111111%;
+  top: 33.333333%;
+}
+.trigger:nth-child(29):hover ~ .card {
+  transform: rotateY(6deg) rotateX(-1.5deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(30) {
+  left: 22.222222%;
+  top: 33.333333%;
+}
+.trigger:nth-child(30):hover ~ .card {
+  transform: rotateY(4deg) rotateX(-1.5deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(31) {
+  left: 33.333333%;
+  top: 33.333333%;
+}
+.trigger:nth-child(31):hover ~ .card {
+  transform: rotateY(2deg) rotateX(-1.5deg);
+  border-radius: 5px;
+}
+
+
+.trigger:nth-child(32) {
+  left: 44.444444%;
+  top: 33.333333%;
+}
+.trigger:nth-child(32):hover ~ .card {
+  transform: rotateY(0deg) rotateX(-1.5deg);
+  border-radius: 5px;
+}
+
+
+.trigger:nth-child(33) {
+  left: 55.555555%;
+  top: 33.333333%;
+}
+.trigger:nth-child(33):hover ~ .card {
+  transform: rotateY(-2deg) rotateX(-1.5deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(34) {
+  left: 66.666666%;
+  top: 33.333333%;
+}
+.trigger:nth-child(34):hover ~ .card {
+  transform: rotateY(-4deg) rotateX(-1.5deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(35) {
+  left: 77.777777%;
+  top: 33.333333%;
+}
+.trigger:nth-child(35):hover ~ .card {
+  transform: rotateY(-6deg) rotateX(-1.5deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(36) {
+  left: 88.888888%;
+  top: 33.333333%;
+}
+.trigger:nth-child(36):hover ~ .card {
+  transform: rotateY(-8deg) rotateX(-1.5deg);
+  border-radius: 5px;
+}
+
+
+
+
+
+.trigger:nth-child(37) {
+  left: 0%;
+  top: 44.444444%;
+}
+.trigger:nth-child(37):hover ~ .card {
+  transform: rotateY(8deg) rotateX(0deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(38) {
+  left: 11.111111%;
+  top: 44.444444%;
+}
+.trigger:nth-child(38):hover ~ .card {
+  transform: rotateY(6deg) rotateX(0deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(39) {
+  left: 22.222222%;
+  top: 44.444444%;
+}
+.trigger:nth-child(39):hover ~ .card {
+  transform: rotateY(4deg) rotateX(0deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(40) {
+  left: 33.333333%;
+  top: 44.444444%;
+}
+.trigger:nth-child(40):hover ~ .card {
+  transform: rotateY(2deg) rotateX(0deg);
+  border-radius: 5px;
+}
+
+
+.trigger:nth-child(41) {
+  left: 44.444444%;
+  top: 44.444444%;
+}
+.trigger:nth-child(41):hover ~ .card {
+  transform: rotateY(0deg) rotateX(0deg);
+  border-radius: 5px;
+}
+
+
+.trigger:nth-child(42) {
+  left: 55.555555%;
+  top: 44.444444%;
+}
+.trigger:nth-child(42):hover ~ .card {
+  transform: rotateY(-2deg) rotateX(0deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(43) {
+  left: 66.666666%;
+  top: 44.444444%;
+}
+.trigger:nth-child(43):hover ~ .card {
+  transform: rotateY(-4deg) rotateX(0deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(44) {
+  left: 77.777777%;
+  top: 44.444444%;
+}
+.trigger:nth-child(44):hover ~ .card {
+  transform: rotateY(-6deg) rotateX(0deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(45) {
+  left: 88.888888%;
+  top: 44.444444%;
+}
+.trigger:nth-child(45):hover ~ .card {
+  transform: rotateY(-8deg) rotateX(0deg);
+  border-radius: 5px;
+}
+
+
+
+
+
+.trigger:nth-child(46) {
+  left: 0%;
+  top: 55.555555%;
+}
+.trigger:nth-child(46):hover ~ .card {
+  transform: rotateY(8deg) rotateX(1.5deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(47) {
+  left: 11.111111%;
+  top: 55.555555%;
+}
+.trigger:nth-child(47):hover ~ .card {
+  transform: rotateY(6deg) rotateX(1.5deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(48) {
+  left: 22.222222%;
+  top: 55.555555%;
+}
+.trigger:nth-child(48):hover ~ .card {
+  transform: rotateY(4deg) rotateX(1.5deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(49) {
+  left: 33.333333%;
+  top: 55.555555%;
+}
+.trigger:nth-child(49):hover ~ .card {
+  transform: rotateY(2deg) rotateX(1.5deg);
+  border-radius: 5px;
+}
+
+
+.trigger:nth-child(50) {
+  left: 44.444444%;
+  top: 55.555555%;
+}
+.trigger:nth-child(50):hover ~ .card {
+  transform: rotateY(0deg) rotateX(1.5deg);
+  border-radius: 5px;
+}
+
+
+.trigger:nth-child(51) {
+  left: 55.555555%;
+  top: 55.555555%;
+}
+.trigger:nth-child(51):hover ~ .card {
+  transform: rotateY(-2deg) rotateX(1.5deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(52) {
+  left: 66.666666%;
+  top: 55.555555%;
+}
+.trigger:nth-child(52):hover ~ .card {
+  transform: rotateY(-4deg) rotateX(1.5deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(53) {
+  left: 77.777777%;
+  top: 55.555555%;
+}
+.trigger:nth-child(53):hover ~ .card {
+  transform: rotateY(-6deg) rotateX(1.5deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(54) {
+  left: 88.888888%;
+  top: 55.555555%;
+}
+.trigger:nth-child(54):hover ~ .card {
+  transform: rotateY(-8deg) rotateX(1.5deg);
+  border-radius: 5px;
+}
+
+
+
+
+
+.trigger:nth-child(55) {
+  left: 0%;
+  top: 66.666666%;
+}
+.trigger:nth-child(55):hover ~ .card {
+  transform: rotateY(8deg) rotateX(3deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(56) {
+  left: 11.111111%;
+  top: 66.666666%;
+}
+.trigger:nth-child(56):hover ~ .card {
+  transform: rotateY(6deg) rotateX(3deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(57) {
+  left: 22.222222%;
+  top: 66.666666%;
+}
+.trigger:nth-child(57):hover ~ .card {
+  transform: rotateY(4deg) rotateX(3deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(58) {
+  left: 33.333333%;
+  top: 66.666666%;
+}
+.trigger:nth-child(58):hover ~ .card {
+  transform: rotateY(2deg) rotateX(3deg);
+  border-radius: 5px;
+}
+
+
+.trigger:nth-child(59) {
+  left: 44.444444%;
+  top: 66.666666%;
+}
+.trigger:nth-child(59):hover ~ .card {
+  transform: rotateY(0deg) rotateX(3deg);
+  border-radius: 5px;
+}
+
+
+.trigger:nth-child(60) {
+  left: 55.555555%;
+  top: 66.666666%;
+}
+.trigger:nth-child(60):hover ~ .card {
+  transform: rotateY(-2deg) rotateX(3deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(61) {
+  left: 66.666666%;
+  top: 66.666666%;
+}
+.trigger:nth-child(61):hover ~ .card {
+  transform: rotateY(-4deg) rotateX(3deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(62) {
+  left: 77.777777%;
+  top: 66.666666%;
+}
+.trigger:nth-child(62):hover ~ .card {
+  transform: rotateY(-6deg) rotateX(3deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(63) {
+  left: 88.888888%;
+  top: 66.666666%;
+}
+.trigger:nth-child(63):hover ~ .card {
+  transform: rotateY(-8deg) rotateX(3deg);
+  border-radius: 5px;
+}
+
+
+
+
+
+.trigger:nth-child(64) {
+  left: 0%;
+  top: 77.777777%;
+}
+.trigger:nth-child(64):hover ~ .card {
+  transform: rotateY(8deg) rotateX(4.5deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(65) {
+  left: 11.111111%;
+  top: 77.777777%;
+}
+.trigger:nth-child(65):hover ~ .card {
+  transform: rotateY(6deg) rotateX(4.5deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(66) {
+  left: 22.222222%;
+  top: 77.777777%;
+}
+.trigger:nth-child(66):hover ~ .card {
+  transform: rotateY(4deg) rotateX(4.5deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(67) {
+  left: 33.333333%;
+  top: 77.777777%;
+}
+.trigger:nth-child(67):hover ~ .card {
+  transform: rotateY(2deg) rotateX(4.5deg);
+  border-radius: 5px;
+}
+
+
+.trigger:nth-child(68) {
+  left: 44.444444%;
+  top: 77.777777%;
+}
+.trigger:nth-child(68):hover ~ .card {
+  transform: rotateY(0deg) rotateX(4.5deg);
+  border-radius: 5px;
+}
+
+
+.trigger:nth-child(69) {
+  left: 55.555555%;
+  top: 77.777777%;
+}
+.trigger:nth-child(69):hover ~ .card {
+  transform: rotateY(-2deg) rotateX(4.5deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(70) {
+  left: 66.666666%;
+  top: 77.777777%;
+}
+.trigger:nth-child(70):hover ~ .card {
+  transform: rotateY(-4deg) rotateX(4.5deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(71) {
+  left: 77.777777%;
+  top: 77.777777%;
+}
+.trigger:nth-child(71):hover ~ .card {
+  transform: rotateY(-6deg) rotateX(4.5deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(72) {
+  left: 88.888888%;
+  top: 77.777777%;
+}
+.trigger:nth-child(72):hover ~ .card {
+  transform: rotateY(-8deg) rotateX(4.5deg);
+  border-radius: 5px;
+}
+
+
+
+
+
+.trigger:nth-child(73) {
+  left: 0%;
+  top: 88.888888%;
+}
+.trigger:nth-child(73):hover ~ .card {
+  transform: rotateY(8deg) rotateX(6deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(74) {
+  left: 11.111111%;
+  top: 88.888888%;
+}
+.trigger:nth-child(74):hover ~ .card {
+  transform: rotateY(6deg) rotateX(6deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(75) {
+  left: 22.222222%;
+  top: 88.888888%;
+}
+.trigger:nth-child(75):hover ~ .card {
+  transform: rotateY(4deg) rotateX(6deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(76) {
+  left: 33.333333%;
+  top: 88.888888%;
+}
+.trigger:nth-child(76):hover ~ .card {
+  transform: rotateY(2deg) rotateX(6deg);
+  border-radius: 5px;
+}
+
+
+.trigger:nth-child(77) {
+  left: 44.444444%;
+  top: 88.888888%;
+}
+.trigger:nth-child(77):hover ~ .card {
+  transform: rotateY(0deg) rotateX(6deg);
+  border-radius: 5px;
+}
+
+
+.trigger:nth-child(78) {
+  left: 55.555555%;
+  top: 88.888888%;
+}
+.trigger:nth-child(78):hover ~ .card {
+  transform: rotateY(-2deg) rotateX(6deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(79) {
+  left: 66.666666%;
+  top: 88.888888%;
+}
+.trigger:nth-child(79):hover ~ .card {
+  transform: rotateY(-4deg) rotateX(6deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(80) {
+  left: 77.777777%;
+  top: 88.888888%;
+}
+.trigger:nth-child(80):hover ~ .card {
+  transform: rotateY(-6deg) rotateX(6deg);
+  border-radius: 5px;
+}
+.trigger:nth-child(81) {
+  left: 88.888888%;
+  top: 88.888888%;
+}
+.trigger:nth-child(81):hover ~ .card {
+  transform: rotateY(-8deg) rotateX(6deg);
+  border-radius: 5px;
+}

@@ -5,20 +5,18 @@ let x = canvas.width / 2;
 let y = canvas.height / 2;
 let dx = -2;
 let dy = getRandom (0,2 * Math.PI);
-let paddleHeight = 98;
-let paddleWidth = 14;
+let paddleHeight = 50;
+let paddleWidth = 80;
 let paddleY = (canvas.height - paddleHeight) / 2;
-let paddleHeightNPC = 98;
-let paddleWidthNPC = 14;
-let paddleYNPC = (canvas.height - paddleHeightNPC) / 2;
 
 function getRandom(min, max) {
   return Math.random() * (max - min) + min
 };
 
-document.addEventListener("mousemove", mouseMoveHandler);
+
+document.addEventListener("mousemove", mouseMoveHandler, false);
 function mouseMoveHandler(e) {
-  let relativeY = e.clientY - canvas.offsetTop;
+  const relativeY = e.clientY - canvas.offsetTop;
   if (relativeY > 0 && relativeY < canvas.height) {
     paddleY = relativeY - paddleHeight / 2;
   }
@@ -40,43 +38,14 @@ function drawPaddle() {
   ctx.closePath();
 }
 
-function drawPaddleNPC() {
-  ctx.beginPath();
-  ctx.rect((canvas.width - paddleWidthNPC) - 2,(y -(paddleHeightNPC / 2)), paddleWidthNPC, paddleHeightNPC);
-  ctx.fillStyle = "#c8c8c8";
-  ctx.fill();
-  ctx.closePath();
-}
 
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   drawBall();
   drawPaddle();
-  drawPaddleNPC()
-  paddleYNPC = (y -(paddleHeightNPC / 2))
 
   if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
     dy = -dy;
-  }
-
-  if (x + dx < ballRadius) {
-    if (y + ballRadius > paddleY && y < paddleY + paddleHeight) {
-      dx = -dx;
-    } else {
-      alert("GAME LOST");
-      document.location.reload();
-      clearInterval(interval);
-    }
-  }
-
-  if (x + dy > canvas.width - ballRadius) {
-    if (y + ballRadius > paddleYNPC && y < paddleYNPC + paddleHeightNPC) {
-      dx = -dx;
-    } else {
-      alert("GAME WON");
-      document.location.reload();
-      clearInterval(interval);
-    }
   }
 
   x += dx;

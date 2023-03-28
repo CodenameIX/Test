@@ -13,11 +13,8 @@
 .dcard {
   margin: 25px 25px 25px 25px;
   position: relative;
-  display: block;
+  display: flex;
   perspective: 500px;
-}
-.dcard:hover{
-  scale: 104%;
 }
 .trigger {
   position: absolute;
@@ -31,7 +28,7 @@
   top: 0%;
 }
 .trigger:nth-child(1):hover ~ .card {
-  transform: rotateY(8deg) rotateX(-5deg);
+  transform: rotateY(8deg) rotateX(-8deg) scaleY(105%) scaleX(105%);
   border-radius: 5px;
 }
 .trigger:nth-child(2) {
@@ -39,7 +36,7 @@
   top: 0%;
 }
 .trigger:nth-child(2):hover ~ .card {
-  transform: rotateY(0deg) rotateX(-5deg);
+  transform: rotateY(0deg) rotateX(-8deg) scaleY(110%) scaleX(105%);
   border-radius: 5px;
 }
 .trigger:nth-child(3) {
@@ -47,7 +44,7 @@
   top: 0%;
 }
 .trigger:nth-child(3):hover ~ .card {
-  transform: rotateY(-8deg) rotateX(-5deg);
+  transform: rotateY(-8deg) rotateX(-8deg) scaleY(105%) scaleX(105%);
   border-radius: 5px;
 }
 .trigger:nth-child(4) {
@@ -55,7 +52,7 @@
   top: 33.333333%;
 }
 .trigger:nth-child(4):hover ~ .card {
-  transform: rotateY(8deg) rotateX(0deg);
+  transform: rotateY(8deg) rotateX(0deg) scaleY(105%) scaleX(112%);
   border-radius: 5px;
 }
 .trigger:nth-child(5) {
@@ -63,7 +60,7 @@
   top: 33.333333%;
 }
 .trigger:nth-child(5):hover ~ .card {
-  transform: rotateY(0deg) rotateX(0deg);
+  transform: rotateY(0deg) rotateX(0deg) scaleY(104%) scaleX(104%);
   border-radius: 5px;
 }
 .trigger:nth-child(6) {
@@ -71,7 +68,7 @@
   top: 33.333333%;
 }
 .trigger:nth-child(6):hover ~ .card {
-  transform: rotateY(-8deg) rotateX(0deg);
+  transform: rotateY(-8deg) rotateX(0deg) scaleY(105%) scaleX(112%);
   border-radius: 5px;
 }
 .trigger:nth-child(7) {
@@ -79,7 +76,7 @@
   top: 66.666666%;
 }
 .trigger:nth-child(7):hover ~ .card {
-  transform: rotateY(8deg) rotateX(5deg);
+  transform: rotateY(8deg) rotateX(8deg) scaleY(105%) scaleX(105%);
   border-radius: 5px;
 }
 .trigger:nth-child(8) {
@@ -87,7 +84,7 @@
   top: 66.666666%;
 }
 .trigger:nth-child(8):hover ~ .card {
-  transform: rotateY(0deg) rotateX(5deg);
+  transform: rotateY(0deg) rotateX(8deg) scaleY(110%) scaleX(105%);
   border-radius: 5px;
 }
 .trigger:nth-child(9) {
@@ -95,6 +92,6 @@
   top: 66.666666%;
 }
 .trigger:nth-child(9):hover ~ .card {
-  transform: rotateY(-8deg) rotateX(5deg);
+  transform: rotateY(-8deg) rotateX(8deg) scaleY(105%) scaleX(105%);
   border-radius: 5px;
 }
