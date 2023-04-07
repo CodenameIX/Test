@@ -1,3 +1,5 @@
+
+/*
 let elements = document.getElementsByClassName("art4");
 for (let i = 0; i < elements.length; i++) {
     elements[i].addEventListener("click", clickHandler);
@@ -13,6 +15,8 @@ function clickHandler() {
         this.classList.add("art4");
     }
 }
+*/
+
 /*
 let elements2 = document.getElementsByClassName("ele");
 let tiltMove = (x, y) => `perspective(500px) scale(1) rotateX(${x}deg) rotateY(${y}deg)`
@@ -37,6 +41,7 @@ for (let i2 = 0; i2 < elements2.length; i2++) {
     }
 }
 */
+
 
 let MM = document.getElementsByClassName("art4")
 let effects = document => {
@@ -126,3 +131,30 @@ card.addEventListener('pointermove', updatePointerPosition);
 
 card.addEventListener('pointerleave', () => updateProperies(0,0));
 */
+
+var testboxes = document.getElementsByClassName("art4");
+function repositionElement(x, y, e) {
+  e.style.left = x + "px";
+  e.style.top = y + "px";
+}
+for (const testbox of testboxes) {
+var X, Y, PressX, PressY;
+testbox.addEventListener('mousedown', function (e2) {
+    X = this.offsetLeft;
+    Y = this.offsetTop;
+    PressX = e2.clientX;
+    PressY = e2.clientY;
+    function MoveHandler(e3) {
+        repositionElement(X + (e3.clientX - PressX),
+            Y + (e3.clientY - PressY), (testbox));
+    }
+    testbox.addEventListener('mousemove', MoveHandler);
+    window.addEventListener('mouseup', function EndHandler() {
+      testbox.removeEventListener('mousemove', MoveHandler);
+        window.removeEventListener('mouseup', EndHandler);
+    });
+});
+}
+repositionElement(600, 10, testboxes[0]);
+repositionElement(1100, 10, testboxes[1]);
+repositionElement(1600, 10, testboxes[2]);

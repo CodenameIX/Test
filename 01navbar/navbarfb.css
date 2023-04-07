@@ -1,52 +1,47 @@
-.topnavbar0 {
-    background-color: rgb(30, 30, 35);
-    position: fixed;
-    display: flex;
-    top: 0;
-    width: 100%;
-    height: 50px;
-    justify-content: center;
-    z-index: 2;
-  }
-  
-  #topnavbar1 {
-    position: fixed;
-    width: 85%;
-    max-width: 1000px;
-    height: 50px;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .topnavbar2 {
-    display: flex;
-  }
-  
-  .topcard1 {
-    background-color: rgb(30, 30, 35);
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    height: 100%;
-    width: 100px;
-    justify-content: center;
-  }
+#topnavbar0 {
+  background-color: rgb(32, 32, 36);
+  position: fixed;
+  display: flex;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  justify-content: center;
+  z-index: 2;
+}
 
-  .topcard1:hover {
-    background-color: rgb(44, 44, 48);
-  }
-  
-  .topcard2 {
-    background-color: rgb(60, 60, 68);
-    inset: 0px;
-  }
-  
-  .topnavbarlink  {
-    color: rgb(200, 200, 200);
-    font: menu;
-    font-size: 1.2em;
-    text-align: center;
-    text-decoration: none;
-  }
+#topnavbar1 {
+  position: fixed;
+  width: 85%;
+  max-width: 1000px;
+  height: 50px;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.topnavbar2 {
+  display: flex;
+}
+
+.topcard1 {
+  background-color: rgb(32, 32, 36);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  width: 100px;
+  justify-content: center;
+}
+
+.topcard1:hover {
+  background-color: rgb(45, 45, 50);
+}
+
+.topnavbarlink {
+  color: rgb(200, 200, 200);
+  font: menu;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+}

@@ -1,52 +1,73 @@
-.sidenavbar0 {
+#burger0 {
+    position: fixed;
+    height: 50px;
+    width: 60px;
+    top: 0;
+    left: 0;
+    color: rgb(110, 110, 110);
+    font-size: 26px;
+    cursor: pointer;
+}
+
+#burger0:hover {
+    background-color: rgb(45, 45, 50);
+    color: rgb(220, 220, 220);
+}
+
+#burger1 {
+    position: relative;
+    top: 6px;
+}
+
+#sidenavbar0 {
     background-color: rgb(24, 24, 25);
-    color: rgb(100, 100, 100);
+    color: rgb(110, 110, 110);
     display: flex;
     text-align: center;
     left: 0;
     height: 100%;
     max-height: calc(100% - 50px);
-    width: 12%;
+    width: 10%;
     min-width: 200px;
     position: fixed;
     overflow: auto;
     justify-content: center;
-    transition: all 0.2s ease;
-    z-index: 1;
+    transition: all 0.4s;
+    z-index: 3;
+}
+
+#sidenavbar0:hover {
+    color: rgb(220, 220, 220);
 }
 
 #sidenavbar1 {
-    margin-top: 20px;
-}
-
-.sidenavbar0:hover {
-    color: rgb(225, 225, 225);
+    margin: 20px 0 0 0;
 }
 
 .sidecard {
     display: flex;
     color: inherit;
-    font-size: 18px;
-    border-radius: 4px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 16px;
+    border-radius: 2px;
     width: min-content;
     height: min-content;
-    padding: 6px 12px 6px 12px;
-    margin: 0px 0px 0px 4px;
+    padding: 4px 11px 7px 8px;
     white-space: nowrap;
     text-align: left;
     justify-content: left;
     text-decoration: none;
-    transition: all 0.2s ease;
 }
 
 .sidecard:hover {
     background-color: rgb(45, 45, 50);
+    color: rgb(225, 225, 225);
 }
 
 .sidecategory1 {
     display: flex;
     align-items: center;
-    font-size: 21px;
+    font-size: 20px;
     margin: 15px 0px 5px 0px;
 }
 
@@ -56,6 +77,7 @@
     padding: 0px 4px 0px 0px;
 }
 
-.sidespace {
-    height: 250px;
+#sidespace {
+    height: 100px;
+    width: 100%;
 }

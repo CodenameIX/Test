@@ -1,10 +1,10 @@
-const navbar = document.querySelector('.topnavbar0');
-fetch('/Test/01navbar/navbar.html')
+const navbar = document.getElementById("topnavbar0");
+fetch("/Test/01navbar/navbar.html")
     .then(res => res.text())
     .then(data => {
         navbar.innerHTML = data;
         const parser = new DOMParser();
-        const doc = parser.parseFromString(data, 'text/html');
+        const doc = parser.parseFromString(data, "text/html");
     }).then(() => {
         document.getElementById("topnavbar1").onmousemove = e => {
             for (const topcard1 of document.getElementsByClassName("topcard1")) {
@@ -15,9 +15,7 @@ fetch('/Test/01navbar/navbar.html')
                 topcard1.style.setProperty("--mouse-x", `${x}px`);
                 topcard1.style.setProperty("--mouse-y", `${y}px`);
             };
-        }
-
-        
+        } 
     });
 
 

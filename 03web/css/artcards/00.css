@@ -7,8 +7,7 @@
     position: relative;
     cursor: pointer;
     object-fit: cover;
-    transition: all 0.2s ease;
-    
+    transition: all 0.2s  ;
 }
 .test2:hover {
   scale: 104%;

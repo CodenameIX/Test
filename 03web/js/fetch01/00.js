@@ -1,4 +1,4 @@
-const nav = document.querySelector('.content0')
+const nav = document.querySelector('#content0')
 fetch('01.html')
   .then(res => res.text())
   .then(data => {
