@@ -1,5 +1,5 @@
 window.addEventListener("load", function () {
-	const content0 = document.getElementById("home0");
+	const content0 = document.getElementById("content0");
 	const canvas = document.getElementById("c0");
 	const ctx = canvas.getContext("2d", {
 		willReadFrequently: true
@@ -120,6 +120,7 @@ window.addEventListener("load", function () {
 					}
 				}
 			}
+			window.addEventListener("click", (e) => { console.log(this.particles) });
 		}
 		render() {
 			this.particles.forEach(particle => {

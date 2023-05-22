@@ -7,11 +7,10 @@
     height: 100%;
     max-height: calc(100% - 50px);
     width: 10%;
-    min-width: 200px;
     position: fixed;
     overflow: auto;
-    justify-content: center;
-    transition: color 0.4s, width 0.4s, min-width 0.4s;
+    justify-content: left;
+    transition: all 0.4s;
     z-index: 3;
 }
 
@@ -20,35 +19,52 @@
 }
 
 #sidenavbar1 {
-    margin: 20px 0 0 0;
-    transition: opacity 0.4s;
+    margin: 1px 0 0 0;
+    background-color: rgb(32, 32, 36);
 }
 
 .sidecard {
+    background-color: rgb(26, 26, 28);
     display: flex;
+    flex-direction: column;
+    position: relative;
     color: inherit;
     font-family: "Segoe UI", Arial, sans-serif;
     font-size: 16px;
-    border-radius: 2px;
-    width: min-content;
-    height: min-content;
-    padding: 4px 11px 7px 8px;
+    width: 200px;
+    height: 40px;
     white-space: nowrap;
     text-align: left;
     justify-content: left;
     text-decoration: none;
 }
 
-.sidecard:hover {
-    background-color: rgb(45, 45, 50);
-    color: rgb(225, 225, 225);
+.sidecard:hover::before {
+    opacity: 1;
+}
+
+.sidecard::before,
+.sidecard::after {
+    content: "";
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.2s;
+    width: 100%;
+}
+
+.sidecard::before {
+    background: radial-gradient(400px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.1), transparent 60%);
 }
 
 .sidecategory1 {
+    background-color: rgb(30, 30, 32);
+    width: 168px;
+    height: min-content;
+    padding: 10px 8px 12px 22px;
     display: flex;
     align-items: center;
     font-size: 20px;
-    margin: 15px 0px 5px 0px;
 }
 
 .sidecategory2 {
@@ -60,4 +76,5 @@
 #sidespace {
     height: 100px;
     width: 100%;
+    background-color: rgb(30, 30, 32);
 }

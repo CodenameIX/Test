@@ -1,0 +1,13 @@
+canvas {
+	background: black;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+input {
+	position: absolute;
+	width: calc(90% - 20px);
+	padding: 10px;
+	margin: 10px;
+}

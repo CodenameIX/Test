@@ -1,5 +1,5 @@
 window.addEventListener("load", function () {
-	const content0 = document.getElementById("home0");
+	const content0 = document.getElementById("content0");
 	const canvas = document.getElementById("c0");
 	const ctx = canvas.getContext("2d", {
 		willReadFrequently: true
@@ -9,8 +9,8 @@ window.addEventListener("load", function () {
 	class Particle {
 		constructor(effect, x, y, color) {
 			this.effect = effect;
-			this.x = Math.random() * canvas.width;
-			this.y = Math.random() * canvas.height;
+			this.x = Math.random() * this.effect.canvasWidth;
+			this.y = canvas.height / 5;
 			this.color = color;
 			this.originX = x;
 			this.originY = y;
@@ -19,56 +19,28 @@ window.addEventListener("load", function () {
 			this.dy = 0;
 			this.vx = 0;
 			this.vy = 0;
-			this.px = 0;
-			this.py = 0;
 			this.force = 0;
 			this.angle = 0;
-			this.mdistance = 0;
-			this.friction = Math.random() * 0.2 - 0.0000001;
-			this.ease = Math.atan(Math.random() * 0.8 + 0);
-			this.random = Math.random() * 6 + 2
+			this.distance = 0;
+			this.friction = Math.random() * 0.5 - 0.001;
+			this.ease = Math.random() * 0.3 + 0.1;
 		}
 		draw() {
 			this.effect.context.fillStyle = this.color;
 			this.effect.context.fillRect(this.x, this.y, this.size, this.size);
 		}
 		update() {
-			this.dx = Math.floor(this.effect.mouse.x - this.x);
-			this.dy = Math.floor(this.effect.mouse.y - this.y);
-			this.mdistance = (this.dx * this.dx + this.dy * this.dy) / 20;
-			this.force = (-this.effect.mouse.radius / 2) / (this.mdistance / 4);
-			if (this.mdistance < this.effect.mouse.radius) {
+			this.dx = this.effect.mouse.x - this.x;
+			this.dy = this.effect.mouse.y - this.y;
+			this.distance = (((this.dx * this.dx) / 2) + this.dy * this.dy) / 10;
+			this.force = (-this.effect.mouse.radius / 8) / (this.distance / 2);
+			if (this.distance < this.effect.mouse.radius) {
 				this.angle = Math.atan2(this.dy, this.dx);
 				this.vx += this.force * Math.cos(this.angle);
 				this.vy += this.force * Math.sin(this.angle);
 			}
-			this.px = this.originX - this.x;
-			this.py = this.originY - this.y;
-			this.x += (this.vx *= this.friction) + (this.px) * this.ease;
-			this.y += (this.vy *= this.friction) + (this.py) * this.ease;
-			if (Math.abs(this.px + this.py) < 0.5) {
-				this.vx += Math.floor(this.random * Math.cos(this.random));
-				this.vy += Math.floor(this.random * Math.sin(this.random));
-			}
-			let min = 0;
-			let max = 200;
-			let clamp = (num, min, max) => Math.min(Math.max(num, min), max);
-			let clampRed = clamp(Math.abs((this.px + this.py)), min, max);
-			let colorRed = 240 - clampRed;
-			let clampGreen = clamp(Math.abs((this.px + this.py) / 1.5), min, max);
-			let colorGreen = 240 - clampGreen;
-			let clampBlue = clamp((this.px + this.py) / (Math.random() * 3 + 1.6), min, max);
-			let colorBlue = 250 - clampBlue;
-			let min3 = -0.95;
-			let max3 = -0.2;
-			let clamp3 = (num, min3, max3) => Math.min(Math.max(num, min3), max3);
-			let opacity = clamp3(-Math.abs((this.px + this.py) / 400), min3, max3) + 1;
-			this.color = "rgba(" + colorRed + "," + colorGreen + "," + colorBlue + "," + opacity + ")";
-			let initsize = 2.5;
-			let min2 = 0;
-			let max2 = 90;
-			let clamp2 = (num2, min2, max2) => Math.min(Math.max(num2, min2), max2);
-			this.size = clamp2((Math.abs((this.px + this.py) / 12) + initsize), min2, max2);
+			this.x += (this.vx *= this.friction) + (this.originX - this.x) * this.ease;
+			this.y += (this.vy *= this.friction) + (this.originY - this.y) * this.ease;
 		}
 	}
 	class Effect {
@@ -78,11 +50,11 @@ window.addEventListener("load", function () {
 			this.canvasHeight = canvasHeight;
 			this.textX = this.canvasWidth / 2;
 			this.textY = this.canvasHeight / 2;
-			this.text = "Willkommen"
-			this.fontSize = 140;
-			this.text2 = "Auf meinem Testbereich"
-			this.fontSize2 = 100;
-			this.size = 3;
+			this.fontSize = 120;
+			this.lineHeight = this.fontSize * 0.9;
+			this.maxTextWidth = this.canvasWidth * 0.7;
+			this.particles = [];
+			this.gap = 2;
 			this.mouse = {
 				radius: 20000,
 				x: 0,
@@ -93,22 +65,45 @@ window.addEventListener("load", function () {
 				this.mouse.y = e.clientY - content0.offsetTop;
 			});
 		}
-		wrap() {
-			this.context.fillStyle = "rgb(230,230,240)";
+		wrapText(text) {
+			const gradient = this.context.createLinearGradient(0, 0, this.canvasWidth, this.canvasHeight);
+			gradient.addColorStop(0.4, "rgb(220,220,225)");
+			gradient.addColorStop(0.5, "rgb(180,180,185)");
+			gradient.addColorStop(0.6, "rgb(140,140,145)");
+			this.context.fillStyle = "rgb(180,180,185)";
 			this.context.textAlign = "center"
 			this.context.textBaseline = "middle"
+			this.context.lineWidth = 2;
+			this.context.strokeStyle = gradient;
 			this.context.font = this.fontSize + "px menu";
-			this.context.fillText(this.text, this.textX, this.textY / 2.2);
-			this.context.font = this.fontSize2 + "px menu";
-			this.context.fillText(this.text2, this.textX, this.textY / 1.1);
+			let linesArray = [];
+			let words = text.split(" ");
+			let lineCounter = 0;
+			let line = "";
+			for (let i = 0; i < words.length; i++) {
+				let testLine = line + words[i] + " ";
+				if (this.context.measureText(testLine).width > this.maxTextWidth) {
+					line = words[i] + " ";
+					lineCounter++;
+				} else {
+					line = testLine;
+				}
+				linesArray[lineCounter] = line;
+			}
+			let textHeight = this.lineHeight * lineCounter;
+			this.textY = this.canvasHeight / 5 - textHeight / 2;
+			linesArray.forEach((el, index) => {
+				this.context.fillText(el, this.textX, this.textY + (index * this.lineHeight));
+				this.context.strokeText(el, this.textX, this.textY + (index * this.lineHeight));
+			});
 			this.convertToParticles();
 		}
 		convertToParticles() {
 			this.particles = [];
 			const pixels = this.context.getImageData(0, 0, this.canvasWidth, this.canvasHeight).data;
 			this.context.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
-			for (let y = 0; y < this.canvasHeight; y += this.size) {
-				for (let x = 0; x < this.canvasWidth; x += this.size) {
+			for (let y = 0; y < this.canvasHeight; y += this.gap) {
+				for (let x = 0; x < this.canvasWidth; x += this.gap) {
 					const index = (y * this.canvasWidth + x) * 4;
 					const alpha = pixels[index + 3];
 					if (alpha > 0) {
@@ -135,11 +130,12 @@ window.addEventListener("load", function () {
 			this.maxTextWidth = this.canvasWidth * 0.8;
 		}
 	}
+	const Text = " Willkommen";
 	const effect = new Effect(ctx, canvas.width, canvas.height);
-	effect.wrap();
+	effect.wrapText(Text);
 	effect.render();
 	function animate() {
-		ctx.clearRect(0, 0, canvas.width, canvas.height);
+	    ctx.clearRect(0, 0, canvas.width, canvas.height);
 		effect.render();
 		const fps = 30;
 		setTimeout(() => {
@@ -151,7 +147,6 @@ window.addEventListener("load", function () {
 		canvas.width = content0.clientWidth;
 		canvas.height = content0.clientHeight;
 		effect.resize(canvas.width, canvas.height);
-		effect.wrap();
+		effect.wrapText(Text);
 	});
 });
-

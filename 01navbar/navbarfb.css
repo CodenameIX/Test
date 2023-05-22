@@ -45,3 +45,24 @@
   text-align: center;
   text-decoration: none;
 }
+
+#burger0 {
+  position: fixed;
+  height: 50px;
+  width: 60px;
+  top: 0;
+  left: 0;
+  color: rgb(110, 110, 110);
+  font-size: 26px;
+  cursor: pointer;
+}
+
+#burger0:hover {
+  background-color: rgb(45, 45, 50);
+  color: rgb(220, 220, 220);
+}
+
+#burger1 {
+  position: relative;
+  top: 6px;
+}

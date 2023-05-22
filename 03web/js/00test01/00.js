@@ -131,7 +131,7 @@ card.addEventListener('pointermove', updatePointerPosition);
 
 card.addEventListener('pointerleave', () => updateProperies(0,0));
 */
-
+/*
 var testboxes = document.getElementsByClassName("art4");
 function repositionElement(x, y, e) {
   e.style.left = x + "px";
@@ -158,3 +158,5 @@ testbox.addEventListener('mousedown', function (e2) {
 repositionElement(600, 10, testboxes[0]);
 repositionElement(1100, 10, testboxes[1]);
 repositionElement(1600, 10, testboxes[2]);
+
+*/

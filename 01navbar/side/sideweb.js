@@ -24,4 +24,5 @@ fetch("/Test/01navbar/side/sideweb.html")
         sidenavbar1.style = "opacity: 0;";
       }
     }
+
   });
