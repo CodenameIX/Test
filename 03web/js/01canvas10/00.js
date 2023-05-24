@@ -79,10 +79,12 @@ window.addEventListener("load", function () {
 			this.textX = this.canvasWidth / 2;
 			this.textY = this.canvasHeight / 2;
 			this.text = "Willkommen"
-			this.fontSize = 140;
+			this.fontSize = Math.floor(canvas.width / 50) + 94;
 			this.text2 = "Auf meinem Testbereich"
-			this.fontSize2 = 100;
+			this.fontSize2 = Math.floor(canvas.width / 50) + 54;
 			this.size = 3;
+			window.addEventListener("click", (e) => { console.log(this.fontSize) });
+			window.addEventListener("click", (e) => { console.log(this.fontSize2) });
 			this.mouse = {
 				radius: 20000,
 				x: 0,
@@ -97,9 +99,9 @@ window.addEventListener("load", function () {
 			this.context.fillStyle = "rgb(230,230,240)";
 			this.context.textAlign = "center"
 			this.context.textBaseline = "middle"
-			this.context.font = this.fontSize + "px menu";
+			this.context.font = this.fontSize + "px Times New Roman";
 			this.context.fillText(this.text, this.textX, this.textY / 2.2);
-			this.context.font = this.fontSize2 + "px menu";
+			this.context.font = this.fontSize2 + "px Times New Roman";
 			this.context.fillText(this.text2, this.textX, this.textY / 1.1);
 			this.convertToParticles();
 		}
@@ -133,7 +135,8 @@ window.addEventListener("load", function () {
 			this.canvasHeight = height;
 			this.textX = this.canvasWidth / 2;
 			this.textY = this.canvasHeight / 2;
-			this.maxTextWidth = this.canvasWidth * 0.8;
+			this.fontSize = Math.floor(canvas.width / 50) + 94;
+			this.fontSize2 = Math.floor(canvas.width / 50) + 54;
 		}
 	}
 	const effect = new Effect(ctx, canvas.width, canvas.height);
@@ -142,7 +145,7 @@ window.addEventListener("load", function () {
 	function animate() {
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 		effect.render();
-		const fps = 30;
+		const fps = 36;
 		setTimeout(() => {
 			requestAnimationFrame(animate);
 		}, 1000 / fps);
