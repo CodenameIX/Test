@@ -24,7 +24,7 @@
 }
 
 .topcard1 {
-  background-color: rgb(32, 32, 36);
+  background-color: inherit;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -53,6 +53,7 @@
 }
 
 .topnavbarlink {
+  background-color: rgb(32, 32, 36);
   color: rgb(200, 200, 200);
   font: menu;
   font-size: 18px;
@@ -79,4 +80,8 @@
 #burger1 {
   position: relative;
   top: 6px;
+}
+
+.TBactive { 
+  background-color: rgb(27, 27, 30);
 }

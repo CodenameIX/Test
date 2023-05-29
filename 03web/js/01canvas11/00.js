@@ -1,5 +1,5 @@
 window.addEventListener("load", function () {
-	const content0 = document.getElementById("home0");
+	const content0 = document.getElementById("content0");
 	const canvas = document.getElementById("c0");
 	const ctx = canvas.getContext("2d", {
 		willReadFrequently: true
@@ -27,12 +27,16 @@ window.addEventListener("load", function () {
 			this.friction = Math.random() * 0.2 - 0.0000001;
 			this.ease = Math.atan(Math.random() * 0.8 + 0);
 			this.random = Math.random() * 6 + 2
+			this.start = Date.now();
 		}
 		draw() {
 			this.effect.context.fillStyle = this.color;
 			this.effect.context.fillRect(this.x, this.y, this.size, this.size);
 		}
 		update() {
+			this.end = Date.now();
+			this.elapsed = (this.end - this.start) / 10000;
+
 			this.dx = Math.floor(this.effect.mouse.x - this.x);
 			this.dy = Math.floor(this.effect.mouse.y - this.y);
 			this.mdistance = (this.dx * this.dx + this.dy * this.dy) / 20;
@@ -44,8 +48,8 @@ window.addEventListener("load", function () {
 			}
 			this.px = this.originX - this.x;
 			this.py = this.originY - this.y;
-			this.x += (this.vx *= this.friction) + (this.px) * this.ease;
-			this.y += (this.vy *= this.friction) + (this.py) * this.ease;
+			this.x += (this.vx *= this.friction) + (this.px) * (this.ease) / this.elapsed;
+			this.y += (this.vy *= this.friction) + (this.py) * (this.ease) / this.elapsed;
 			if (Math.abs(this.px + this.py) < 0.5) {
 				this.vx += Math.floor(this.random * Math.cos(this.random));
 				this.vy += Math.floor(this.random * Math.sin(this.random));
@@ -59,7 +63,7 @@ window.addEventListener("load", function () {
 			let colorGreen = 240 - clampGreen;
 			let clampBlue = clamp((this.px + this.py) / (Math.random() * 3 + 1.6), min, max);
 			let colorBlue = 250 - clampBlue;
-			let min3 = -0.95;
+			let min3 = -1;
 			let max3 = -0.2;
 			let clamp3 = (num, min3, max3) => Math.min(Math.max(num, min3), max3);
 			let opacity = clamp3(-Math.abs((this.px + this.py) / 400), min3, max3) + 1;
@@ -83,12 +87,14 @@ window.addEventListener("load", function () {
 			this.text2 = "Auf meinem Testbereich"
 			this.fontSize2 = Math.floor(canvas.width / 50) + 54;
 			this.size = 3;
+			window.addEventListener("click", (e) => { console.log(this.fontSize) });
+			window.addEventListener("click", (e) => { console.log(this.fontSize2) });
 			this.mouse = {
 				radius: 20000,
 				x: 0,
 				y: 0
 			}
-			window.addEventListener("mousemove", (e) => {
+			window.addEventListener("pointermove", (e) => {
 				this.mouse.x = e.clientX - content0.offsetLeft;
 				this.mouse.y = e.clientY - content0.offsetTop;
 			});
@@ -120,6 +126,7 @@ window.addEventListener("load", function () {
 					}
 				}
 			}
+			window.addEventListener("click", (e) => { console.log(this.particles) });
 		}
 		render() {
 			this.particles.forEach(particle => {

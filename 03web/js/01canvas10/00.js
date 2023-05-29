@@ -83,8 +83,6 @@ window.addEventListener("load", function () {
 			this.text2 = "Auf meinem Testbereich"
 			this.fontSize2 = Math.floor(canvas.width / 50) + 54;
 			this.size = 3;
-			window.addEventListener("click", (e) => { console.log(this.fontSize) });
-			window.addEventListener("click", (e) => { console.log(this.fontSize2) });
 			this.mouse = {
 				radius: 20000,
 				x: 0,
@@ -122,7 +120,6 @@ window.addEventListener("load", function () {
 					}
 				}
 			}
-			window.addEventListener("click", (e) => { console.log(this.particles) });
 		}
 		render() {
 			this.particles.forEach(particle => {
@@ -145,7 +142,7 @@ window.addEventListener("load", function () {
 	function animate() {
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 		effect.render();
-		const fps = 36;
+		const fps = 30;
 		setTimeout(() => {
 			requestAnimationFrame(animate);
 		}, 1000 / fps);

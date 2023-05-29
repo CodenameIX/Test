@@ -24,7 +24,7 @@
 }
 
 .topcard1 {
-  background: linear-gradient(359.8deg, rgba(35,35,40,1) 60%, rgba(26,42,60,1) 100%);
+  background: inherit;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -53,6 +53,7 @@
 }
 
 .topnavbarlink {
+  background: linear-gradient(359.8deg, rgba(35,35,40,1) 60%, rgba(26,42,60,1) 100%);
   color: rgb(200, 200, 200);
   font: menu;
   font-size: 18px;
@@ -79,4 +80,9 @@
 #burger1 {
   position: relative;
   top: 6px;
+}
+
+.TBactive { 
+  background: rgb(27, 27, 30);
+  background-color: rgb(27, 27, 30);
 }

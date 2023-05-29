@@ -24,4 +24,14 @@ fetch("/Test/01navbar/side/sidecode.html")
         sidenavbar1.style = "opacity: 0;";
       }
     }
+    let SBactivePage = window.location.pathname;
+    let SBheight = window.innerHeight;
+    let SBcards = document.getElementsByClassName("sidecard");
+    let SBscroll = document.getElementById("sidenavbar0");
+    for (let i = 0; i < SBcards.length; i++) {
+      if (SBcards[i].attributes.href.value == SBactivePage) {
+        SBcards[i].classList.add("SBactive");
+        SBscroll.scrollTop = (SBcards[i].offsetTop) - (SBheight / 2.5);
+      }
+    }
   });

@@ -74,7 +74,12 @@
 }
 
 #sidespace {
-    height: 100px;
+    height: 200px;
     width: 100%;
     background-color: rgb(30, 30, 32);
+}
+
+.SBactive{
+    background-color: rgb(70, 80, 90);
+    color: rgb(225, 225, 225);
 }

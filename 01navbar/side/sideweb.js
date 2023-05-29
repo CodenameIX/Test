@@ -13,7 +13,7 @@ fetch("/Test/01navbar/side/sideweb.html")
       let content0 = document.getElementById("content0");
       let x = document.getElementById("sidenavbar0").offsetWidth;
       let sidenavbar1 = document.getElementById("sidenavbar1");
-      if (x==0) {
+      if (x == 0) {
         sidenavbar0.style = "";
         content0.style = "";
         sidenavbar1.style = "";
@@ -24,5 +24,14 @@ fetch("/Test/01navbar/side/sideweb.html")
         sidenavbar1.style = "opacity: 0;";
       }
     }
-
+    let SBactivePage = window.location.pathname;
+    let SBheight = window.innerHeight;
+    let SBcards = document.getElementsByClassName("sidecard");
+    let SBscroll = document.getElementById("sidenavbar0");
+    for (let i = 0; i < SBcards.length; i++) {
+      if (SBcards[i].attributes.href.value == SBactivePage) {
+        SBcards[i].classList.add("SBactive");
+        SBscroll.scrollTop = (SBcards[i].offsetTop) - (SBheight / 2.5);
+      }
+    }
   });
