@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Calc</title>
+  <link href="/Test/0main.css" rel="stylesheet" type="text/css">
+  <link href="/Test/01navbar/navbar.css" rel="stylesheet" type="text/css">
+  <link href="/Test/01navbar/side/side.css" rel="stylesheet" type="text/css">
+  <link href="00.css" rel="stylesheet" type="text/css">
+</head>
+
+<div id="topnavbar0"></div>
+<div id="sidenavbar0"></div>
+
+
+<body>
+  <div id="content0">
+    <div id="cdiv">
+      <canvas id="c0"></canvas>
+      <canvas id="c2"></canvas>
+      <canvas id="c3"></canvas>
+    </div>
+    <div id="inputside">
+      <canvas id="c1"></canvas>
+      <input type="text" id="RXinput" placeholder="R X Type..."></input>
+      <input type="text" id="RYinput" placeholder="R Y Type..."></input>
+      <input type="text" id="RZinput" placeholder="R Z Type..."></input>
+      <input type="text" id="RBinput" placeholder="R B Type..."></input>
+
+      <input type="text" id="GXinput" placeholder="G X Type..."></input>
+      <input type="text" id="GYinput" placeholder="G Y Type..."></input>
+      <input type="text" id="GZinput" placeholder="G Z Type..."></input>
+      <input type="text" id="GBinput" placeholder="G B Type..."></input>
+
+      <input type="text" id="BXinput" placeholder="B X Type..."></input>
+      <input type="text" id="BYinput" placeholder="B Y Type..."></input>
+      <input type="text" id="BZinput" placeholder="B Z Type..."></input>
+      <input type="text" id="BBinput" placeholder="B B Type..."></input>
+
+      <input type="text" id="fps" placeholder="FPS"></input>
+      <input type="text" id="count" placeholder="count"></input>
+      <input type="text" id="trail" placeholder="trail"></input>
+
+      <input type="button" id="start" value="Start"></input>
+      <input type="button" id="stop" value="Stop"></input>
+      <input type="button" id="reset" value="Reset"></input>
+      <input type="button" id="clear" value="Clear"></input>
+      <input type="button" id="speed" value="Speed"></input>
+
+      <input type="button" id="save0" value="Save0"></input>
+      <input type="button" id="load0" value="Load0"></input>
+
+      <input type="button" id="demo" value="Demo"></input>
+      <div id="legacy">
+        <br>All inputs are Javascript Math</br>
+        <br>Start = start animation and calculation, initial true</br>
+        <br>Stop = stops animation and calculation</br>
+        <br>Reset = location.reload();</br>
+        <br>Clear = clears all input fields and location.reload();</br>
+        <br>Speed = !JANK! duplicates animate function</br>
+        <br>Demo = exemple animation</br>
+        <br>trail = 0-100 draw opacity</br>
+        <br>count = (+=input) for every frame</br>
+        <br>FPS = animation fps</br>
+        <br>Save/Load = cookie save/load</br>
+        <br>Resize window is buggy, only 99% acurate</br>
+        <br>Custom inputs:</br>
+        <br>sec, ms, and all ..out with each other</br>
+        <br>RBout, GBout, BBout have no direckt function</br>
+      </div>
+    </div>
+  </div>
+
+  <script language="javascript" type="text/javascript" src="00.js"></script>
+  <script language="javascript" type="text/javascript" src="/Test/01navbar/navbar.js"></script>
+  <script language="javascript" type="text/javascript" src="/Test/01navbar/side/sidecode.js"></script>
+</body>
+
+</html>

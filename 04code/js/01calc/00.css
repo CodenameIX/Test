@@ -1,0 +1,222 @@
+#cdiv {
+    text-align: center;
+    display: flex;
+	left: 0;
+    height: 100%;
+    width: 100%;
+	max-width: calc(100% - 600px);
+    right: 600px;
+    overflow: auto;
+    position: fixed;
+    justify-content: center;
+}
+#c0 {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#c2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#c3 {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#inputside{
+    text-align: center;
+    display: flex;
+    height: 100%;
+    width: 600px;
+    right: 0;
+    overflow: auto;
+    position: fixed;
+    justify-content: center;
+}
+#c1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+
+#RXinput {
+	position: absolute;
+	top: 68px;
+	right: 8px;
+	width: 96%;
+	padding: 2px;
+}
+#RYinput {
+	position: absolute;
+	top: 128px;
+	right: 8px;
+	width: 96%;
+	padding: 2px;
+}
+#RZinput {
+	position: absolute;
+	top: 188px;
+	right: 8px;
+	width: 96%;
+	padding: 2px;
+}
+#RBinput {
+	position: absolute;
+	top: 248px;
+	right: 8px;
+	width: 96%;
+	padding: 2px;
+}
+
+#GXinput {
+	position: absolute;
+	top: 308px;
+	right: 8px;
+	width: 96%;
+	padding: 2px;
+}
+#GYinput {
+	position: absolute;
+	top: 368px;
+	right: 8px;
+	width: 96%;
+	padding: 2px;
+}
+#GZinput {
+	position: absolute;
+	top: 428px;
+	right: 8px;
+	width: 96%;
+	padding: 2px;
+}
+#GBinput {
+	position: absolute;
+	top: 488px;
+	right: 8px;
+	width: 96%;
+	padding: 2px;
+}
+
+#BXinput {
+	position: absolute;
+	top: 548px;
+	right: 8px;
+	width: 96%;
+	padding: 2px;
+}
+#BYinput {
+	position: absolute;
+	top: 608px;
+	right: 8px;
+	width: 96%;
+	padding: 2px;
+}
+#BZinput {
+	position: absolute;
+	top: 668px;
+	right: 8px;
+	width: 96%;
+	padding: 2px;
+}
+#BBinput {
+	position: absolute;
+	top: 728px;
+	right: 8px;
+	width: 96%;
+	padding: 2px;
+}
+
+#fps {
+	position: absolute;
+	top: 38px;
+	right: 8px;
+	width: 40px;
+	padding: 2px;
+}
+#count {
+	position: absolute;
+	top: 38px;
+	right: 58px;
+	width: 40px;
+	padding: 2px;
+}
+#trail {
+	position: absolute;
+	top: 38px;
+	right: 108px;
+	width: 40px;
+	padding: 2px;
+}
+
+#speed {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	width: 48px;
+	padding: 2px;
+}
+#demo {
+	position: absolute;
+	top: 8px;
+	right: 58px;
+	width: 48px;
+	padding: 2px;
+}
+#clear {
+	position: absolute;
+	top: 8px;
+	right: 108px;
+	width: 48px;
+	padding: 2px;
+}
+#reset {
+	position: absolute;
+	top: 8px;
+	right: 158px;
+	width: 48px;
+	padding: 2px;
+}
+#stop {
+	position: absolute;
+	top: 8px;
+	right: 208px;
+	width: 48px;
+	padding: 2px;
+}
+#start {
+	position: absolute;
+	top: 8px;
+	right: 258px;
+	width: 48px;
+	padding: 2px;
+}
+
+#save0 {
+	position: absolute;
+	top: 8px;
+	left: 8px;
+	width: 48px;
+	padding: 2px;
+}
+#load0 {
+	position: absolute;
+	top: 38px;
+	left: 8px;
+	width: 48px;
+	padding: 2px;
+}
+
+#legacy {
+	font-size: 24px;
+    text-align: center;
+    display: flex;
+    height: fit-content;
+    width: fit-content;
+	top: 820px;
+	margin-bottom: 200px;
+	position: relative;
+}
