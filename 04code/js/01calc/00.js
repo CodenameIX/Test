@@ -5,10 +5,10 @@ let canvasc0 = document.getElementById("c0");
 let canvasc1 = document.getElementById("c1");
 let canvasc2 = document.getElementById("c2");
 let canvasc3 = document.getElementById("c3");
-let ctxc0 = canvasc0.getContext("2d");
-let ctxc1 = canvasc1.getContext("2d");
-let ctxc2 = canvasc2.getContext("2d");
-let ctxc3 = canvasc3.getContext("2d");
+let ctxc0 = canvasc0.getContext("2d", {willReadFrequently: false, desynchronized: true});
+let ctxc1 = canvasc1.getContext("2d", {willReadFrequently: false, desynchronized: true});
+let ctxc2 = canvasc2.getContext("2d", {willReadFrequently: true, desynchronized: true});
+let ctxc3 = canvasc3.getContext("2d", {willReadFrequently: false, desynchronized: true});
 let Xmid = 0;
 let Ymid = 0;
 let RXin = 0;
@@ -115,7 +115,6 @@ document.getElementById("start").addEventListener("click", function () {
 document.getElementById("reset").addEventListener("click", function () {
 	location.reload();
 });
-window.addEventListener("click", (e) => {console.log( document.getElementById("inputside").clientWidth )});
 document.getElementById("demo").addEventListener("click", function () {
 	document.getElementById("RXinput").value = "(Math.sin(count/240)*400)+(Math.sin(count*2)*100)"
 	document.getElementById("RYinput").value = "Math.cos(count/240)*50"
