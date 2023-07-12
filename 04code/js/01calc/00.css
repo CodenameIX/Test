@@ -1,41 +1,46 @@
 #cdiv {
-    text-align: center;
-    display: flex;
+	text-align: center;
+	display: flex;
 	left: 0;
-    height: 100%;
-    width: 100%;
-    right: 600px;
-    overflow: auto;
-    position: fixed;
-    justify-content: center;
+	height: 100%;
+	width: 100%;
+	max-width: calc(100% - 600px);
+	right: 600px;
+	overflow: auto;
+	position: fixed;
+	justify-content: center;
 }
+
 #c0 {
 	position: absolute;
 	top: 0;
 	left: 0;
 }
+
 #c2 {
 	position: absolute;
 	top: 0;
 	left: 0;
 }
+
 #c3 {
 	position: absolute;
 	top: 0;
 	left: 0;
 }
 
-#inputside{
+#inputside {
 	background-color: rgba(0, 0, 0, 0);
-    text-align: center;
-    display: flex;
-    height: 100%;
-    width: 600px;
-    right: 0;
-    overflow: auto;
-    position: fixed;
-    justify-content: center;
+	text-align: center;
+	display: flex;
+	height: 100%;
+	width: 600px;
+	right: 0;
+	overflow: auto;
+	position: fixed;
+	justify-content: center;
 }
+
 #c1 {
 	position: absolute;
 	top: 0;
@@ -50,6 +55,7 @@
 	width: 96%;
 	padding: 2px;
 }
+
 #RYinput {
 	position: absolute;
 	top: 128px;
@@ -57,6 +63,7 @@
 	width: 96%;
 	padding: 2px;
 }
+
 #RZinput {
 	position: absolute;
 	top: 188px;
@@ -64,6 +71,7 @@
 	width: 96%;
 	padding: 2px;
 }
+
 #RBinput {
 	position: absolute;
 	top: 248px;
@@ -79,6 +87,7 @@
 	width: 96%;
 	padding: 2px;
 }
+
 #GYinput {
 	position: absolute;
 	top: 368px;
@@ -86,6 +95,7 @@
 	width: 96%;
 	padding: 2px;
 }
+
 #GZinput {
 	position: absolute;
 	top: 428px;
@@ -93,6 +103,7 @@
 	width: 96%;
 	padding: 2px;
 }
+
 #GBinput {
 	position: absolute;
 	top: 488px;
@@ -108,6 +119,7 @@
 	width: 96%;
 	padding: 2px;
 }
+
 #BYinput {
 	position: absolute;
 	top: 608px;
@@ -115,6 +127,7 @@
 	width: 96%;
 	padding: 2px;
 }
+
 #BZinput {
 	position: absolute;
 	top: 668px;
@@ -122,6 +135,7 @@
 	width: 96%;
 	padding: 2px;
 }
+
 #BBinput {
 	position: absolute;
 	top: 728px;
@@ -137,6 +151,7 @@
 	width: 40px;
 	padding: 2px;
 }
+
 #count {
 	position: absolute;
 	top: 38px;
@@ -144,6 +159,7 @@
 	width: 40px;
 	padding: 2px;
 }
+
 #trail {
 	position: absolute;
 	top: 38px;
@@ -159,6 +175,7 @@
 	width: 48px;
 	padding: 2px;
 }
+
 #clear {
 	position: absolute;
 	top: 8px;
@@ -166,6 +183,7 @@
 	width: 48px;
 	padding: 2px;
 }
+
 #demo {
 	position: absolute;
 	top: 8px;
@@ -173,6 +191,7 @@
 	width: 48px;
 	padding: 2px;
 }
+
 #reset {
 	position: absolute;
 	top: 8px;
@@ -180,6 +199,7 @@
 	width: 48px;
 	padding: 2px;
 }
+
 #stop {
 	position: absolute;
 	top: 8px;
@@ -187,6 +207,7 @@
 	width: 48px;
 	padding: 2px;
 }
+
 #start {
 	position: absolute;
 	top: 8px;
@@ -202,6 +223,7 @@
 	width: 48px;
 	padding: 2px;
 }
+
 #load0 {
 	position: absolute;
 	top: 38px;
@@ -213,10 +235,10 @@
 #legacy {
 	font-size: 24px;
 	line-height: 30px;
-    text-align: center;
-    display: flex;
-    height: fit-content;
-    width: fit-content;
+	text-align: center;
+	display: flex;
+	height: fit-content;
+	width: fit-content;
 	top: 820px;
 	margin-bottom: 200px;
 	position: relative;
