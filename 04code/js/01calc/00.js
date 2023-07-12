@@ -1,3 +1,4 @@
+localload();
 let cdiv = document.getElementById("cdiv");
 let inputside = document.getElementById("inputside");
 let canvasc0 = document.getElementById("c0");
@@ -65,6 +66,43 @@ let imgData3 = 0;
 let expires = 0;
 let cName = 0;
 let load = 0;
+function localsave() {
+	localStorage.setItem("RXlocal", document.getElementById("RXinput").value);
+	localStorage.setItem("RYlocal", document.getElementById("RYinput").value);
+	localStorage.setItem("RZlocal", document.getElementById("RZinput").value);
+	localStorage.setItem("RBlocal", document.getElementById("RBinput").value);
+	localStorage.setItem("GXlocal", document.getElementById("GXinput").value);
+	localStorage.setItem("GYlocal", document.getElementById("GYinput").value);
+	localStorage.setItem("GZlocal", document.getElementById("GZinput").value);
+	localStorage.setItem("GBlocal", document.getElementById("GBinput").value);
+	localStorage.setItem("BXlocal", document.getElementById("BXinput").value);
+	localStorage.setItem("BYlocal", document.getElementById("BYinput").value);
+	localStorage.setItem("BZlocal", document.getElementById("BZinput").value);
+	localStorage.setItem("BBlocal", document.getElementById("BBinput").value);
+	localStorage.setItem("fpslocal", document.getElementById("fps").value);
+	localStorage.setItem("countlocal", document.getElementById("count").value);
+	localStorage.setItem("traillocal", document.getElementById("trail").value);
+}
+function localload() {
+	document.getElementById("RXinput").value = localStorage.getItem("RXlocal");
+	document.getElementById("RYinput").value = localStorage.getItem("RYlocal");
+	document.getElementById("RZinput").value = localStorage.getItem("RZlocal");
+	document.getElementById("RBinput").value = localStorage.getItem("RBlocal");
+	document.getElementById("GXinput").value = localStorage.getItem("GXlocal");
+	document.getElementById("GYinput").value = localStorage.getItem("GYlocal");
+	document.getElementById("GZinput").value = localStorage.getItem("GZlocal");
+	document.getElementById("GBinput").value = localStorage.getItem("GBlocal");
+	document.getElementById("BXinput").value = localStorage.getItem("BXlocal");
+	document.getElementById("BYinput").value = localStorage.getItem("BYlocal");
+	document.getElementById("BZinput").value = localStorage.getItem("BZlocal");
+	document.getElementById("BBinput").value = localStorage.getItem("BBlocal");
+	document.getElementById("fps").value = localStorage.getItem("fpslocal");
+	document.getElementById("count").value = localStorage.getItem("countlocal");
+	document.getElementById("trail").value = localStorage.getItem("traillocal");
+}
+document.getElementById("stop").addEventListener("click", function () {
+	anim = false;
+});
 document.getElementById("stop").addEventListener("click", function () {
 	anim = false;
 });
@@ -77,6 +115,7 @@ document.getElementById("start").addEventListener("click", function () {
 document.getElementById("reset").addEventListener("click", function () {
 	location.reload();
 });
+window.addEventListener("click", (e) => {console.log( document.getElementById("inputside").clientWidth )});
 document.getElementById("demo").addEventListener("click", function () {
 	document.getElementById("RXinput").value = "(Math.sin(count/240)*400)+(Math.sin(count*2)*100)"
 	document.getElementById("RYinput").value = "Math.cos(count/240)*50"
@@ -93,7 +132,6 @@ document.getElementById("demo").addEventListener("click", function () {
 	document.getElementById("fps").value = "60"
 	document.getElementById("count").value = "1.4"
 	document.getElementById("trail").value = "95"
-	location.reload();
 });
 document.getElementById("clear").addEventListener("click", function () {
 	document.getElementById("RXinput").value = ""
@@ -111,6 +149,7 @@ document.getElementById("clear").addEventListener("click", function () {
 	document.getElementById("fps").value = ""
 	document.getElementById("count").value = ""
 	document.getElementById("trail").value = ""
+	localStorage.clear();
 	location.reload();
 });
 document.getElementById("save0").addEventListener("click", function () {
@@ -168,7 +207,6 @@ document.getElementById("load0").addEventListener("click", function () {
 	document.getElementById("fps").value = load[13];
 	document.getElementById("count").value = load[14];
 	document.getElementById("trail").value = load[15];
-	location.reload();
 });
 document.getElementById("speed").addEventListener("click", function () {
 	animate();
@@ -277,7 +315,9 @@ function renderc1() {
 	endTime = new Date();
 	ms = (endTime - startTime);
 	sec = Math.floor((endTime - startTime) / 1000);
-	count += parse(countin);
+	if (countin > 0) {
+		count += parse(countin);
+	}
 	RXout = parse(RXin);
 	RYout = parse(RYin);
 	RZout = parse(RZin);
@@ -342,6 +382,7 @@ function renderc3() {
 
 function animate() {
 	ctxc1.clearRect(0, 0, canvasc1.width, canvasc1.height);
+	localsave();
 	renderc1();
 	renderc2();
 	renderc3();

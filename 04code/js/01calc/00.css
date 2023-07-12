@@ -4,7 +4,6 @@
 	left: 0;
     height: 100%;
     width: 100%;
-	max-width: calc(100% - 600px);
     right: 600px;
     overflow: auto;
     position: fixed;
@@ -27,6 +26,7 @@
 }
 
 #inputside{
+	background-color: rgba(0, 0, 0, 0);
     text-align: center;
     display: flex;
     height: 100%;
@@ -159,14 +159,14 @@
 	width: 48px;
 	padding: 2px;
 }
-#demo {
+#clear {
 	position: absolute;
 	top: 8px;
 	right: 58px;
 	width: 48px;
 	padding: 2px;
 }
-#clear {
+#demo {
 	position: absolute;
 	top: 8px;
 	right: 108px;
@@ -212,6 +212,7 @@
 
 #legacy {
 	font-size: 24px;
+	line-height: 30px;
     text-align: center;
     display: flex;
     height: fit-content;
